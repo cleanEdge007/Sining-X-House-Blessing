@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're Invited! Sining's Birthday + House Blessing 🎉</title>
+<meta name="description" content="Join us for Sining's Birthday and House Blessing on December 22, 2026 at 10:00 AM in Greenridge, Binangonan, Rizal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ====== EDIT THIS: paste your Google Form link below ====== */
+  /* (Also change it in the <script> at the bottom: FORM_LINK)  */
+
+  :root {
+    --neon: #39FF14;
+    --neon-soft: #b8ffab;
+    --purple: #7B2CBF;
+    --purple-deep: #3C096C;
+    --purple-dark: #240046;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--purple-dark);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* Floating confetti background */
+  .bg {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(57,255,20,.18), transparent 40%),
+      radial-gradient(circle at 85% 10%, rgba(123,44,191,.55), transparent 45%),
+      radial-gradient(circle at 70% 85%, rgba(57,255,20,.12), transparent 40%),
+      linear-gradient(160deg, var(--purple-dark), var(--purple-deep) 60%, #10002b);
+  }
+  .confetti {
+    position: fixed; top: -20px; z-index: 0; pointer-events: none;
+    width: 10px; height: 14px; border-radius: 2px; opacity: .85;
+    animation: fall linear infinite;
+  }
+  @keyframes fall {
+    to { transform: translateY(110vh) rotate(720deg); }
+  }
+
+  main { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 30px 0 10px; }
+  .tag {
+    display: inline-block; font-weight: 600; font-size: .85rem; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--purple-dark); background: var(--neon);
+    padding: 6px 16px; border-radius: 999px; box-shadow: 0 0 18px rgba(57,255,20,.6);
+  }
+  h1 {
+    font-family: 'Fredoka', sans-serif; font-weight: 700;
+    font-size: clamp(2.6rem, 9vw, 5rem); line-height: 1.05; margin: 22px 0 8px;
+  }
+  h1 .name {
+    display: block; color: var(--neon);
+    text-shadow: 0 0 10px rgba(57,255,20,.8), 0 0 30px rgba(57,255,20,.5);
+    animation: glow 2.4s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 8px rgba(57,255,20,.6), 0 0 20px rgba(57,255,20,.3); }
+    to   { text-shadow: 0 0 14px rgba(57,255,20,1), 0 0 44px rgba(57,255,20,.7); }
+  }
+  .plus {
+    font-family: 'Fredoka', sans-serif; font-size: clamp(1.3rem, 4.5vw, 2rem);
+    font-weight: 600; color: var(--white);
+  }
+  .plus span { color: var(--neon); }
+  .lead { margin: 18px auto 0; max-width: 520px; font-size: 1.08rem; color: #eadcff; }
+
+  /* Countdown */
+  .countdown {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    margin: 36px 0 10px;
+  }
+  .unit {
+    background: rgba(255,255,255,.07); border: 2px solid rgba(57,255,20,.45);
+    border-radius: 18px; padding: 16px 6px; text-align: center;
+    box-shadow: inset 0 0 18px rgba(57,255,20,.08);
+  }
+  .unit b {
+    display: block; font-family: 'Fredoka', sans-serif; font-size: clamp(1.8rem, 7vw, 2.8rem);
+    color: var(--neon); line-height: 1;
+  }
+  .unit small { font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: #d6c4f5; }
+  .count-note { text-align: center; font-size: .9rem; color: #cbb8ec; }
+
+  /* Cards */
+  .card {
+    background: var(--white); color: var(--purple-dark);
+    border-radius: 26px; padding: 30px 26px; margin-top: 34px;
+    box-shadow: 0 0 0 4px var(--neon), 0 18px 50px rgba(0,0,0,.35);
+  }
+  .card h2 {
+    font-family: 'Fredoka', sans-serif; font-size: 1.7rem; color: var(--purple);
+    margin-bottom: 18px; text-align: center;
+  }
+  .details { display: grid; gap: 14px; }
+  .row {
+    display: flex; align-items: center; gap: 16px;
+    background: #f5eeff; border-radius: 16px; padding: 14px 16px;
+  }
+  .icon {
+    flex: 0 0 52px; height: 52px; border-radius: 14px; display: grid; place-items: center;
+    font-size: 1.6rem; background: var(--purple); box-shadow: 0 0 0 3px var(--neon);
+  }
+  .row .label { font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--purple); font-weight: 600; }
+  .row .value { font-weight: 600; font-size: 1.08rem; }
+  .row a { color: var(--purple); font-size: .9rem; font-weight: 600; }
+
+  /* What to expect */
+  .expect { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .pill {
+    text-align: center; padding: 18px 10px; border-radius: 18px;
+    background: linear-gradient(160deg, var(--purple), var(--purple-deep)); color: var(--white);
+  }
+  .pill .emoji { font-size: 2rem; display: block; }
+  .pill p { font-weight: 600; margin-top: 6px; font-size: .98rem; }
+
+  /* RSVP */
+  .rsvp {
+    text-align: center; margin-top: 44px; padding: 36px 22px;
+    border: 3px dashed var(--neon); border-radius: 28px;
+    background: rgba(57,255,20,.06);
+  }
+  .rsvp h2 { font-family: 'Fredoka', sans-serif; font-size: clamp(1.7rem, 6vw, 2.3rem); }
+  .rsvp h2 span { color: var(--neon); }
+  .rsvp p { color: #eadcff; max-width: 480px; margin: 10px auto 26px; }
+  .btn {
+    display: inline-block; text-decoration: none; cursor: pointer;
+    font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+    color: var(--purple-dark); background: var(--neon);
+    padding: 18px 38px; border-radius: 999px;
+    box-shadow: 0 0 0 4px var(--white), 0 0 30px rgba(57,255,20,.85);
+    transition: transform .15s ease, box-shadow .2s ease;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  .btn:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 0 0 4px var(--white), 0 0 50px rgba(57,255,20,1); }
+  .btn:active { transform: scale(.98); }
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 0 4px var(--white), 0 0 22px rgba(57,255,20,.7); }
+    50%     { box-shadow: 0 0 0 4px var(--white), 0 0 42px rgba(57,255,20,1); }
+  }
+  .rsvp .small { font-size: .88rem; margin-top: 20px; color: #cbb8ec; }
+
+  footer { text-align: center; margin-top: 46px; color: #cbb8ec; font-size: .95rem; }
+  footer strong { color: var(--neon); }
+
+  /* Fade-in on scroll */
+  .reveal { opacity: 0; transform: translateY(24px); transition: all .7s ease; }
+  .reveal.show { opacity: 1; transform: none; }
+
+  @media (max-width: 480px) {
+    .countdown { gap: 8px; }
+    .unit { padding: 12px 4px; border-radius: 14px; }
+    .card { padding: 24px 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, .confetti { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <span class="tag">🎉 You're Invited!</span>
+    <h1>Let's Celebrate <span class="name">Sining!</span></h1>
+    <div class="plus">🎂 Birthday <span>×</span> 🏡 House Blessing</div>
+    <p class="lead">
+      Two happy reasons, one big day! Come party with us, share some good food,
+      and help us bless our new home. It won't be the same without you!
+    </p>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="reveal">
+    <div class="countdown" id="countdown">
+      <div class="unit"><b id="d">--</b><small>Days</small></div>
+      <div class="unit"><b id="h">--</b><small>Hours</small></div>
+      <div class="unit"><b id="m">--</b><small>Mins</small></div>
+      <div class="unit"><b id="s">--</b><small>Secs</small></div>
+    </div>
+    <p class="count-note" id="countNote">until the party starts! ⏳</p>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="card reveal">
+    <h2>📌 Save the Date</h2>
+    <div class="details">
+      <div class="row">
+        <div class="icon">📅</div>
+        <div>
+          <div class="label">When</div>
+          <div class="value">Tuesday, December 22, 2026</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="icon">⏰</div>
+        <div>
+          <div class="label">Time</div>
+          <div class="value">10:00 AM</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="icon">📍</div>
+        <div>
+          <div class="label">Where</div>
+          <div class="value">Greenridge, Binangonan, Rizal</div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Greenridge+Binangonan+Rizal" target="_blank" rel="noopener">Open in Google Maps →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO EXPECT -->
+  <section class="card reveal">
+    <h2>✨ What to Expect</h2>
+    <div class="expect">
+      <div class="pill"><span class="emoji">🙏</span><p>House Blessing</p></div>
+      <div class="pill"><span class="emoji">🍽️</span><p>Yummy Food</p></div>
+      <div class="pill"><span class="emoji">🎂</span><p>Birthday Cake</p></div>
+      <div class="pill"><span class="emoji">📸</span><p>Fun &amp; Photos</p></div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp reveal" id="rsvp">
+    <h2>Coming? <span>RSVP Now!</span></h2>
+    <p>
+      Tell us you're coming so we can count you in! 🙌
+      It only takes a minute and helps us prepare enough food and seats for everyone.
+    </p>
+    <a class="btn" id="rsvpBtn" href="#" target="_blank" rel="noopener">✅ Yes, Count Me In!</a>
+    <p class="small">Please RSVP as early as you can. See you there! 💚💜</p>
+  </section>
+
+  <footer>
+    With love and excitement,<br>
+    <strong>Sining &amp; Family</strong> 💚🤍💜
+  </footer>
+</main>
+
+<script>
+  // ====== EDIT THIS: paste your Google Form link here ======
+  const FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLScSroahPhwzr5GtPYJyylyQJX6p7WBb1Zikn6lbUyWpvZ_pVw/viewform?usp=publish-editor";
+
+  document.getElementById("rsvpBtn").href = FORM_LINK;
+
+  // Countdown to Dec 22, 2026, 10:00 AM (Philippine Time)
+  const target = new Date("2026-12-22T10:00:00+08:00").getTime();
+  const $ = id => document.getElementById(id);
+  const pad = n => String(n).padStart(2, "0");
+
+  function tick() {
+    const diff = target - Date.now();
+    if (diff <= 0) {
+      ["d","h","m","s"].forEach(id => $(id).textContent = "00");
+      $("countNote").textContent = "🎉 It's party time! 🎉";
+      return;
+    }
+    $("d").textContent = Math.floor(diff / 86400000);
+    $("h").textContent = pad(Math.floor(diff / 3600000) % 24);
+    $("m").textContent = pad(Math.floor(diff / 60000) % 60);
+    $("s").textContent = pad(Math.floor(diff / 1000) % 60);
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // Confetti
+  const colors = ["#39FF14", "#ffffff", "#9D4EDD", "#C77DFF"];
+  for (let i = 0; i < 28; i++) {
+    const c = document.createElement("div");
+    c.className = "confetti";
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.background = colors[i % colors.length];
+    c.style.animationDuration = 6 + Math.random() * 8 + "s";
+    c.style.animationDelay = -Math.random() * 12 + "s";
+    if (Math.random() > .5) c.style.borderRadius = "50%";
+    document.body.appendChild(c);
+  }
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("show"); io.unobserve(e.target); } });
+  }, { threshold: .15 });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
